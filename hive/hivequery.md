@@ -1,4 +1,4 @@
-## Using Hive Server
+## Using Hive
 
 ## About
 
