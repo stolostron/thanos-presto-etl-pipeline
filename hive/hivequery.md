@@ -41,4 +41,4 @@ see tables;
 
 <img width="379" alt="Screen Shot 2022-08-04 at 7 26 21 AM" src="https://user-images.githubusercontent.com/89415386/182871838-ce30cc49-c949-478b-85d7-3955bb7f99e2.png">
 
-Then it's next to go switch to the presto terminal to start querying!
+Next, switch to the presto terminal to start querying!
