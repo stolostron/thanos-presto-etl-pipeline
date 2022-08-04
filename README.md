@@ -37,7 +37,7 @@ You could use `beeline` to connect to the server after it's up and running
 ```sh
 $ docker-compose exec hive beeline -u jdbc:hive2://localhost:10000
 ```
-### To create schema and tables in Hive read the hivequerying.md located in the hive directory.
+### To create schemas and tables in Hive read the hivequery.md located in the hive directory.
 
 ### using Presto CLI
 
