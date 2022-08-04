@@ -21,6 +21,8 @@ Once the database is created then it should be able to use by writing:
 
 use database_name;
 
+<img width="851" alt="Screen Shot 2022-08-04 at 7 29 30 AM" src="https://user-images.githubusercontent.com/89415386/182872507-e2526f7f-5809-404c-ac52-9d1ba3efaaf4.png">
+
 <img width="565" alt="Screen Shot 2022-08-04 at 6 49 25 AM" src="https://user-images.githubusercontent.com/89415386/182863499-9c9b8c88-5066-4b6a-b645-883180c1e36b.png">
 
 Once it is confirmed the database is being used the user can create their schema for their data. Given that the schema will change depending on the logical types each column has, this will vary from user to user. In this example the schema will be curated for parquet files.
@@ -38,6 +40,8 @@ Then load the data from the location into the table.
 You will be able to see the tables you created by using:
 
 see tables;
+
+<img width="681" alt="Screen Shot 2022-08-04 at 7 29 52 AM" src="https://user-images.githubusercontent.com/89415386/182872608-2ad0b021-3109-43ff-a845-c86f33307f65.png">
 
 <img width="379" alt="Screen Shot 2022-08-04 at 7 26 21 AM" src="https://user-images.githubusercontent.com/89415386/182871838-ce30cc49-c949-478b-85d7-3955bb7f99e2.png">
 
