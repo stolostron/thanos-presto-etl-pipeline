@@ -8,18 +8,22 @@ These directions will allow a user to create a database, a schema and table to s
 
 The following commands will create a local Hive database to store the user's future schemas and tables:
 
+```sh
 create database database_name;
+```
 
 <img width="554" alt="Screen Shot 2022-08-03 at 11 29 07 AM" src="https://user-images.githubusercontent.com/89415386/182682488-8a119135-ffa3-46de-81a1-2a4a72433f2c.png">
 
-In this example I used the database name metrics.
+In this example the database name was metrics.
 These should be the results:
 
 <img width="411" alt="Screen Shot 2022-08-04 at 6 45 32 AM" src="https://user-images.githubusercontent.com/89415386/182862632-3158efbb-2eb8-4720-8077-309ce5635159.png">
 
-Once the database is created then it should be able to use by writing:
+Once the database is created then it should be able to be used by writing:
 
+```sh
 use database_name;
+```
 
 <img width="851" alt="Screen Shot 2022-08-04 at 7 29 30 AM" src="https://user-images.githubusercontent.com/89415386/182872507-e2526f7f-5809-404c-ac52-9d1ba3efaaf4.png">
 
@@ -39,7 +43,9 @@ Then load the data from the location into the table.
 
 You will be able to see the tables you created by using:
 
+```sh
 see tables;
+```
 
 <img width="681" alt="Screen Shot 2022-08-04 at 7 29 52 AM" src="https://user-images.githubusercontent.com/89415386/182872608-2ad0b021-3109-43ff-a845-c86f33307f65.png">
 
