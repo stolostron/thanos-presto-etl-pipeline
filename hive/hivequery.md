@@ -2,7 +2,7 @@
 
 ## About
 
-These directions will allow a user to create a database, a schema and table to successfully query metrics gathered from user's S3 bucket storage.
+These directions will allow a user to create a database, a schema and table to successfully query data gathered from user's S3 bucket storage.
 
 ### Creating/Using Database
 
