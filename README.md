@@ -24,6 +24,21 @@ Update the following configuration files with your AWS credentials:
 $ docker-compose up -d
 ```
 
+### Running Hive Server (optional)
+
+```sh
+$ docker-compose exec -d hive hiveserver2 
+```
+
+This will start Hive server in the background.
+
+You could use `beeline` to connect to the server after it's up and running
+
+```sh
+$ docker-compose exec hive beeline -u jdbc:hive2://localhost:10000
+```
+### To create schema and tables in Hive read the hivequerying.md located in the hive directory.
+
 ### using Presto CLI
 
 ```sh
@@ -45,18 +60,3 @@ SELECT * FROM table_name LIMIT 2;
 And you have a table full of data! 
 
 <img width="712" alt="Screen Shot 2022-08-04 at 7 44 24 AM" src="https://user-images.githubusercontent.com/89415386/182876227-bcd3b766-87aa-4dcc-a144-d30f11c055f3.png">
-
-
-### Running Hive Server (optional)
-
-```sh
-$ docker-compose exec -d hive hiveserver2 
-```
-
-This will start Hive server in the background.
-
-You could use `beeline` to connect to the server after it's up and running
-
-```sh
-$ docker-compose exec hive beeline -u jdbc:hive2://localhost:10000
-```
