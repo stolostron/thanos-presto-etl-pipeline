@@ -29,10 +29,10 @@ $ docker-compose up -d
 ```sh
 $ docker-compose exec presto presto-cli --catalog s3 --schema default
 ```
-Use the schema created throguh the Hive Server.
+Use the schema created throguh the Hive Server. (In this example the schema name is metrics)
 
 ```sh
-docker-compose exec presto presto-cli --catalog s3 --schema schema_name (In this example the schema name is metrics)
+docker-compose exec presto presto-cli --catalog s3 --schema schema_name 
 ```
 
 <img width="415" alt="Screen Shot 2022-08-04 at 7 37 13 AM" src="https://user-images.githubusercontent.com/89415386/182874581-184fb8a1-7370-43fa-a4de-fe96dffaaf6b.png">
