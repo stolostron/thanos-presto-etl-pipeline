@@ -1,2 +1,5 @@
 out.pq
 s3-output-config.yaml
+*.key
+input-config.yaml
+storage-config.yaml
