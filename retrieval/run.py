@@ -74,7 +74,8 @@ while True:
     
     # run the obslytics tool with current params for every match listed in config
     for match in query['matches']:
-        output_config['path'] = match.data.replace(':', '->') + '.pq'
+        matchname = match.data.replace(':', '->')
+        output_config['path'] = matchname + '/' + matchname + '.pq'
         sub.run('obslytics export' \
                 f' --match={match}' \
                 f' --resolution={query["resolution"]}' \
