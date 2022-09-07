@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  core-site.xml: "<configuration>\r\n    <property>\r\n        <name>fs.s3a.connection.ssl.enabled</name>\r\n\t<value>false</value>\r\n
+    \   </property>\r\n    <property>\r\n\t<name>fs.s3a.endpoint</name>\r\n\t<value>10.62.64.200</value>\r\n
+    \   </property>\r\n    <property>\r\n\t<name>fs.s3a.fast.upload</name>\r\n\t<value>true</value>\r\n
+    \   </property>\r\n</configuration>\r\n"
+  metastore-site.xml: "<configuration>\n<property>\n\t<name>metastore.task.threads.always</name>\n\t<value>org.apache.hadoop.hive.metastore.events.EventCleanerTask</value>\n</property>\n<property>\n\t<name>metastore.expression.proxy</name>\n\t<value>org.apache.hadoop.hive.metastore.DefaultPartitionExpressionProxy</value>\n</property>\n<property>\n\t<name>javax.jdo.option.ConnectionDriverName</name>\n\t<value>com.mysql.jdbc.Driver</value>\n</property>\n<property>\n\t<name>javax.jdo.option.ConnectionURL</name>\n\t<value>jdbc:mysql://metastore-db.open-cluster-management-observability.svc.cluster.local:13306/metastore_db</value>\n</property>\n<property>\n\t<name>javax.jdo.option.ConnectionUserName</name>\n\t<value>root</value>\n</property>\n<property>\n\t<name>javax.jdo.option.ConnectionPassword</name>\n\t<value>mypass</value>\n</property>\n<property>\n\t<name>metastore.warehouse.dir</name>\n\t<value>s3a://btroutma-obslytics/warehouse</value>\n</property>\n<property>\n\t<name>metastore.thrift.port</name>\n\t<value>9083</value>\n</property>\n</configuration>\n"
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: metastore-cfg
