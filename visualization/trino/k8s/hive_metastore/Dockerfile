@@ -11,11 +11,6 @@ RUN curl https://archive.apache.org/dist/hadoop/core/hadoop-$HADOOP_VERSION/hado
 	&& ln -s /opt/hadoop-$HADOOP_VERSION /opt/hadoop \
 	&& rm -r /opt/hadoop/share/doc 
 
-USER 1001
-RUN mkdir /opt/hadoop-$HADOOP_VERSION/logs
-
-USER root
-
 # Add S3a jars to the classpath using this hack.
 RUN ln -s /opt/hadoop/share/hadoop/tools/lib/hadoop-aws* /opt/hadoop/share/hadoop/common/lib/ && \
     ln -s /opt/hadoop/share/hadoop/tools/lib/aws-java-sdk* /opt/hadoop/share/hadoop/common/lib/
@@ -25,12 +20,13 @@ ENV HADOOP_HOME="/opt/hadoop"
 ENV PATH="/opt/spark/bin:/opt/hadoop/bin:${PATH}"
 
 # Download and install the standalone metastore binary.
-RUN curl wget https://downloads.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz \
+RUN curl http://apache.uvigo.es/hive/hive-standalone-metastore-3.0.0/hive-standalone-metastore-3.0.0-bin.tar.gz \
 	| tar xvz -C /opt/ \
-	&& ln -s /opt/apache-hive-3.1.2-bin /opt/hive
+	&& ln -s /opt/apache-hive-metastore-3.0.0-bin /opt/hive-metastore
 
 # Download and install the mysql connector.
 RUN curl -L https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.tar.gz \
 	| tar xvz -C /opt/ \
 	&& ln -s /opt/mysql-connector-java-5.1.47/mysql-connector-java-5.1.47.jar /opt/hadoop/share/hadoop/common/lib/ \
-	&& ln -s /opt/mysql-connector-java-5.1.47/mysql-connector-java-5.1.47.jar /opt/hive/lib/ 
+	&& ln -s /opt/mysql-connector-java-5.1.47/mysql-connector-java-5.1.47.jar /opt/hive-metastore/lib/ 
+
