@@ -51,8 +51,8 @@ spec:
         args: ["-p", "9083"]
         resources:
           requests:
-            memory: "16G"
-            cpu: 4
+            memory: "8G"
+            cpu: 2
         imagePullPolicy: Always
       imagePullSecrets:
         - name: anxhela21-obslytics-pull-secret
